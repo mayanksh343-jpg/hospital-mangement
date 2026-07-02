@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import PatientForm from "./PatientForm"; 
-import PatientList from "./patientList";
+import PatientList from "./PatientList";
 
 export default function App() {
   // Line 8 should be inside the return or a proper hook call
