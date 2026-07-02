@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY my-react-app/package*.json ./
 
-RUN npm ci
+RUN npm install
 
 COPY my-react-app/ .
 
