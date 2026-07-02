@@ -13,7 +13,7 @@ const PatientForm = () => {
     e.preventDefault();
     try {
       // Ensure this URL matches your Node.js server port
-      const response = await axios.post('http://15.207.71.235:5000/api/register', formData);
+      const response = await axios.post('http://65.2.37.53:5000/api/register', formData);
       alert(response.data.message);
       // Reset form after success
       setFormData({ name: '', age: '', gender: 'Male', symptoms: '' });
