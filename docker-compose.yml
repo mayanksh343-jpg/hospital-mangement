@@ -11,7 +11,7 @@ services:
       - mongo-data:/data/db
 
   backend:
-    build: ./backend
+    image: mayanksh786/hospital-backend
     container_name: hospital-backend
     restart: always
     env_file:
@@ -22,7 +22,7 @@ services:
       - mongo
 
   frontend:
-    build: ./frontend
+    image: mayanksh786/hospital-frontend
     container_name: hospital-frontend
     restart: always
     ports:
