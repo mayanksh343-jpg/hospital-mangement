@@ -1,10 +1,10 @@
 FROM node:20
-
+#"Start from an image that already has Node.js 20 installed."
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm ci
 
 COPY . .
 

@@ -11,7 +11,7 @@ const PatientList = () => {
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/patients');
+        const res = await axios.get('http://15.207.71.235:5000/api/patients');
         setPatients(res.data);
         setLoading(false);
       } catch (err) {
@@ -26,7 +26,7 @@ const PatientList = () => {
   const deletePatient = async (id) => {
     if (window.confirm("Are you sure you want to discharge this patient?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/patients/${id}`);
+        await axios.delete(`http://15.207.71.235:5000/api/patients/${id}`);
         // Update local state to remove the deleted patient
         setPatients(patients.filter(patient => patient._id !== id));
       } catch (err) {

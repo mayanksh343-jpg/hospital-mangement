@@ -13,7 +13,7 @@ const PatientForm = () => {
     e.preventDefault();
     try {
       // Ensure this URL matches your Node.js server port
-      const response = await axios.post('http://localhost:5000/api/register', formData);
+      const response = await axios.post('http://15.207.71.235:5000/api/register', formData);
       alert(response.data.message);
       // Reset form after success
       setFormData({ name: '', age: '', gender: 'Male', symptoms: '' });
@@ -25,7 +25,7 @@ const PatientForm = () => {
 
   return (
     <div className="container">
-      <h2>Patient Registration</h2>
+      <h2>Patient Registration form</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-group">
           <input 
